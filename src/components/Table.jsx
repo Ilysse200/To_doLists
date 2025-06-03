@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/navbar.css";
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import { FaEdit, FaTrash, FaSave } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Table = ({ tasks, onDelete, onEdit, filterCategory }) => {
 
@@ -22,14 +23,43 @@ const Table = ({ tasks, onDelete, onEdit, filterCategory }) => {
             <th>Actions</th> */}
           </tr>
         </thead>
-        <tbody className='table-styles'>
-          {Array.isArray(tasks) && tasks.map((item, index) => (
-            <tr key={index} className='table-content'>
-              <td className='table data'>{item.id}</td>
-              <td className='table data'>{item.content}</td>
-              <td className='table data' style={{ display: 'flex', gap: '.6rem' }}>
-                <FaEdit style={{ color: 'green', cursor: 'pointer' }} />
-                <FaTrash style={{ color: 'red', cursor: 'pointer' }} />
+        <tbody>
+          {filteredTasks.map((task) => (
+            <tr key={task.id} className='table-content'>
+              <td>{task.id}</td>
+              <td>
+                {editingId === task.id ? (
+                  <input
+                    value={editedText}
+                    onChange={(e) => setEditedText(e.target.value)}
+                  />
+                ) : (
+                  task.content
+                )}
+              </td>
+              <td style={{ display: 'flex', gap: '10px' }}>
+                {editingId === task.id ? (
+                  <FaSave
+                    style={{ cursor: 'pointer', color: 'blue' }}
+                    onClick={() => {
+                      onEdit(task.id, editedText);
+                      setEditingId(null);
+                    }}
+                  />
+                ) : (
+                  <FaEdit
+                    style={{ cursor: 'pointer', color: 'green' }}
+                    onClick={() => {
+                      setEditingId(task.id);
+                      setEditedText(task.content);
+                    }}
+                  />
+                )}
+
+                <FaTrash
+                  style={{ cursor: 'pointer', color: 'red' }}
+                  onClick={() => onDelete(task.id)}
+                />
               </td>
             </tr>
           ))}
