@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import "../styles/navbar.css"
-const Navbar = ({tasks, setTasks}) => {
+const Navbar = ({ tasks, setTasks, setFilterCategory }) => {
 
   const [inputText, setInputText] = useState('');
   const [duration, setDuration] = useState('Daily');
@@ -48,11 +48,15 @@ const Navbar = ({tasks, setTasks}) => {
       </div>
       <div className='upper-content'>
         <ul>
-          <li className='all-listing'>All</li>
-          <li>Daily</li>
-          <li>Weekly</li>
-          <li>Monthly</li>
-          <li>Year</li>
+          {['All', 'Daily', 'Weekly', 'Monthly', 'Year'].map((type) => (
+            <li
+              key={type}
+              onClick={() => setFilterCategory(type)}
+              className='filter-button'
+            >
+              {type}
+            </li>
+          ))}
         </ul>
       </div>
 

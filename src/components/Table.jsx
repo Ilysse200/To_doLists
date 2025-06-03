@@ -2,7 +2,16 @@ import React from 'react';
 import "../styles/navbar.css";
 import { FaEdit, FaTrash } from 'react-icons/fa';
 
-const Table = ({ tasks }) => {
+const Table = ({ tasks, onDelete, onEdit, filterCategory }) => {
+
+  const [editingId, setEditingId] = useState(null);
+  const [editedText, setEditedText] = useState('');
+
+  const filteredTasks =
+    filterCategory === "All"
+      ? tasks
+      : tasks.filter((task) => task.duration === filterCategory);
+
   return (
     <div className='main-Tablecontent'>
       <table className='tableStyles'>
