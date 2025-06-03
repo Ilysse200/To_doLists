@@ -3,14 +3,13 @@ import { useState } from 'react';
 import "../styles/navbar.css"
 const Navbar = ({tasks, setTasks}) => {
 
-  const [tasks, setTasks] = useState([]);
   const [inputText, setInputText] = useState('');
   const [duration, setDuration] = useState('Daily');
   const handleAddTask = () => {
     if (!inputText.trim()) return;
 
     const newTask = {
-      id: tasks.length + 1,
+      id: (tasks?.length || 0) + 1,
       content: inputText,
       duration: duration
     };
@@ -23,7 +22,7 @@ const Navbar = ({tasks, setTasks}) => {
   return (
     <div className='main-container'>
       <div className='upper-card'>
-        <h1>Make a <str>better</str> plan <br />for your life</h1>
+        <h1>Make a <strong>better</strong> plan <br />for your life</h1>
         <div className='positioning-content'>
           <p>Whoever you are, whatever you are looking for, we <br /> have the perfect place for you
           </p>
@@ -38,7 +37,7 @@ const Navbar = ({tasks, setTasks}) => {
             <option>Year</option>
           </select>
           <input
-            type='Text'
+            type='text'
             className='classContainer'
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}

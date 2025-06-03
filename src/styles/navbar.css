@@ -26,7 +26,7 @@
     font-size: 0.9rem;
     font-weight: lighter;
 }
-.upper-card str{
+.upper-card strong{
     color:#8c8ca4;
     font-weight: bolder;
 }
@@ -95,26 +95,32 @@
     position: relative;
 }
 .tableStyles{
-    width:70rem;
+    width:68rem;
     height: 40vh;
     margin-left: 2.3rem;
     background-color: #1c201f;
 }
 .table-content{
-    margin-left: 6rem;
+    margin-left: 2.6rem;
     border-radius: 1.2rem;
+    display: flex;
     
 }
 .tableStyles tr{
+    width: 51rem;
     border-radius: 1.2rem;
+    border:0.1rem solid #4e5139;
+    margin-top: 1rem;
 }
 
 td{
-    margin-left: 0.6rem;
+    margin-left: 0.4rem;
     font-size: 1.4rem;
-    padding-right: 1.2rem;
     background-color: #1c201f;
-    border-bottom:0.1rem solid #4e5139;
+    padding: 1.2rem;
     color: white;
+    border-radius:1.2rem;
+    padding-right: 10rem;
 
 }
+
