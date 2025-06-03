@@ -1,12 +1,12 @@
 import React from 'react'
 import "../styles/navbar.css"
 import { arrayListings } from './listings'
-const Table = () => {
+const Table = ({tasks}) => {
   return (
      <div className='main-Tablecontent'>
         <table className='tableStyles'>
             <tbody className='table-styles'>
-                {arrayListings.map((item, index)=>(
+                {tasks.map((item, index)=>(
 
                     <tr key={index} className='table-content'>
                         <td className='table data'>{item.id}</td>
