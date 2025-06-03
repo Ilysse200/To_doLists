@@ -66,11 +66,14 @@
     border: 0.1rem solid #6f734c;
     margin-left: 0.4rem;
     border-radius: 1.2rem;
-    width: 10rem;
+    height: auto;
+    width: 14rem;
     text-transform: capitalize;
     padding-top: 0.4rem;
-    /* background-color: black;
-    border-style: none; */
+    margin-bottom: 0.68rem;
+    background-color: black;
+    border-style: none;
+    color: white;
 }
 
 .button-container {
