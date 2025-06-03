@@ -1,8 +1,9 @@
 .main-container{
-    width:90%;
-    height:47rem;
+    width:89%;
+    height:89rem;
     background-color: black;
     border-radius: 1rem;
+    margin-left: 0.4rem;
     /* margin: 0; */
     position: fixed;
 }
@@ -92,15 +93,19 @@
 }
 .main-Tablecontent{
     width:45%;
-    height: 2rem;
-    top:25rem;
+    height: 20rem;
+    top:18.6rem;
     position: relative;
+    
+    
 }
 .tableStyles{
     width:68rem;
-    height: 40vh;
+    height: 50vh;
     margin-left: 2.3rem;
     background-color: #1c201f;
+    border-radius: 0.8rem;
+    z-index: 1000;
 }
 .table-content{
     margin-left: 2.6rem;
@@ -113,6 +118,7 @@
     border-radius: 1.2rem;
     border:0.1rem solid #4e5139;
     margin-top: 1rem;
+    position: relative;
 }
 
 td{
