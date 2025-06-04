@@ -22,7 +22,7 @@
 
 .upper-card {
     margin-left: 1.2rem;
-    width: 80%;
+    width: 90%;
     height: auto;
     padding: 1rem;
     background-color: #393c3a;
@@ -72,7 +72,7 @@
     border: 0.1rem solid #6f734c;
     margin-left: 0.4rem;
     border-radius: 1.2rem;
-    width: 14rem;
+    width: 18rem;
     text-transform: capitalize;
     height:2.3rem;
     margin-top: 0.7rem;
