@@ -52,7 +52,7 @@
 .positioning-content {
     display: flex;
     flex-direction: row;
-    width:82%;
+    min-width:82%;
 }
 
 .duration-select {
