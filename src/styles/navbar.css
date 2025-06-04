@@ -23,7 +23,8 @@
 .upper-card {
     margin-left: 1.2rem;
     width: 80%;
-    height: 12rem;
+    height: auto;
+    padding: 1rem;
     background-color: #393c3a;
     border-radius: 1.3rem;
 }
@@ -73,7 +74,7 @@
     border-radius: 1.2rem;
     width: 14rem;
     text-transform: capitalize;
-    padding-top: 0.4rem;
+    /* padding-top: 0.4rem; */
     margin-bottom: 0.68rem;
     background-color: black;
     border-style: none;
