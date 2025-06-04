@@ -19,16 +19,18 @@ const App = () => {
 
   return (
     <>
-      <Navbar tasks={tasks}
-        setTasks={setTasks}
-        setFilterCategory={setFilterCategory}
-      />
-      <Table tasks={tasks}
-        onDelete={handleDelete}
-        onEdit={handleEdit}
-        filterCategory={filterCategory}
-      />
+      <div className="black">
+        <Navbar tasks={tasks}
+          setTasks={setTasks}
+          setFilterCategory={setFilterCategory}
+        />
+        <Table tasks={tasks}
+          onDelete={handleDelete}
+          onEdit={handleEdit}
+          filterCategory={filterCategory}
 
+        />
+      </div>
     </>
 
 

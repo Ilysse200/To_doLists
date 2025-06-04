@@ -1,19 +1,24 @@
 .main-container {
     width: 90%;
-    min-height: 120vh;
-    background: linear-gradient(145deg, #111111, #1a1a1a);
+    /* min-height: 120vh; */
+    /* background: linear-gradient(145deg, #111111, #1a1a1a); */
     border-radius: 1.2rem;
     margin: 2rem auto;
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     color: white;
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
     /* Adds spacing between hero & table */
 }
-
+.black{
+    background-color: #111111;
+    border-radius: 1.2rem;
+    width: 90%;
+    margin: 2rem auto;
+}
 
 .upper-card {
     margin-left: 1.2rem;
@@ -130,7 +135,7 @@
     border-radius: 0.8rem;
     padding: 1rem;
     box-sizing: border-box;
-    position: absolute;
+    /* position: absolute; */
     top: -43rem;
     margin-left: 9rem;
     max-height: 50vh;
